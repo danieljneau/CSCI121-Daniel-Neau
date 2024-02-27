@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class BadSubscriptCaught {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter an integer");
+        String s = scan.nextLine();
+        boolean legal;
+        do{
+            legal = true;
+            try{
+                int a = Integer.parseInt(s);
+            }catch (NumberFormatException exception){
+                System.out.println("NumberFormatException " + exception.getMessage() +"\nPlease re-enter with a valid integer");
+                s = scan.nextLine();
+                legal = false;
+            }catch (Exception exception){
+                System.out.println("Exception " + exception.getMessage() + "Please re-enter a valid integer");
+                s = scan.nextLine();
+                legal = false;
+            }
+        }while (legal == false);
+        System.out.println(s + " is an integer");
+    }
+}
