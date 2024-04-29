@@ -1,0 +1,7 @@
+Is your thing alive?
+Does your thing swim in the ocean?
+#Fish
+#Elephant
+Can your thing bounce?
+#Ball
+#Computer
